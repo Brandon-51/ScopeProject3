@@ -14,7 +14,50 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
-
+function recVolume(height) {
+  let dimensions = [height];
+  const getDimension = (num) => {
+    if (dimensions < 3) {
+      dimensions.push(num);
+    }
+    if (dimensions.length === 3) {
+      let product = 1;
+      for (let dimension of dimensions) {
+        product *= dimension;
+      }
+      return product;
+    } else {
+      return getDimension;
+    }
+  };
+  return getDimension;
+  // let counter = 0;
+  // let volume = 0;
+  // if (counter <= 2) {
+  //   console.log("1st");
+  //   if (counter <= 2) {
+  //     console.log("2nd");
+  //     const innerFuntion = (num) => {
+  //       if (counter <= 0) {
+  //         console.log("3rd");
+  //         width = num;
+  //         counter++;
+  //         return innerFuntion;
+  //       } else if (counter <= 1) {
+  //         let length = num;
+  //         volume = height * width * length;
+  //         console.log("else if");
+  //         counter++;
+  //         return innerFuntion;
+  //       }
+  //       return volume;
+  //     };
+  //     return innerFuntion
+  //   }
+  // }
+  // return volume;
+}
+recVolume(10);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
