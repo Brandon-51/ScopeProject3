@@ -14,40 +14,19 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
-function recVolume(height) {
-  // console.log('start')
+const recVolume = height => {
   let dimensions = [height];
-  const getDimension = (num) => {
-    // console.log(num)
-    num = 10; 
-    console.log(num)
+  const _measure = num => {
     if (dimensions.length < 3) {
-      // console.log(dimensions)
-      newDim = dimensions.push(num);
-      // console.log('this is a newDim ' + newDim)
-      console.log(dimensions)
+      dimensions.push(num);
     }
     if (dimensions.length === 3) {
-      // console.log('second')
-      let product = 1;
-      // console.log(product)
-      for (let dimension of dimensions) {
-        product *= dimension;
-        // console.log(product);
-        // console.log('loop')
-      }
-      return product;
-    } 
-    else {
-      console.log('else')
-      return getDimension();
+      return dimensions.reduce((prev, curr) => prev * curr);
     }
-  };
-  // console.log('end')
-  return getDimension();
- 
+    return _measure;
+  }
+  return _measure;
 }
-recVolume(19);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
